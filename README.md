@@ -30,13 +30,13 @@
   
   # 遍历调用所有工具
   for tool in tools:
-    if isinstance(tool, tuple):
-      cutter = eval(tool[0] + "_impl")(tool[1])
+  	if isinstance(tool, tuple):
+  		cutter = eval(tool[0] + "_impl")(tool[1])
       tool = tool[0]
-      else:
-        cutter = eval(tool + "_impl")()
+  	else:
+      cutter = eval(tool + "_impl")()
       
-      print(tool, cutter.cut("人生自古谁无死，留取丹心照汗青"))
+    print(tool, cutter.cut("人生自古谁无死，留取丹心照汗青"))
   ```
 
 **调用词性标注**
@@ -60,9 +60,9 @@ for tool in tools:
   if isinstance(tool, tuple):
     cutter = eval(tool[0] + "_impl")(tool[1], 'postag')
     tool = tool[0]
-    else:
-      cutter = eval(tool + "_impl")('postag')
+	else:
+    cutter = eval(tool + "_impl")()
     
-    print(tool, cutter.cut("人生自古谁无死，留取丹心照汗青"))
+  print(tool, cutter.cut("人生自古谁无死，留取丹心照汗青"))
 ```
 
