@@ -30,39 +30,39 @@
   
   # 遍历调用所有工具
   for tool in tools:
-  	if isinstance(tool, tuple):
-  		cutter = eval(tool[0] + "_impl")(tool[1])
-      tool = tool[0]
-  	else:
-      cutter = eval(tool + "_impl")()
-      
-    print(tool, cutter.cut("人生自古谁无死，留取丹心照汗青"))
+      if isinstance(tool, tuple):
+          cutter = eval(tool[0] + "_impl")(tool[1])
+          tool = tool[0]
+      else:
+          cutter = eval(tool + "_impl")()
+  
+      print(tool, cutter.cut("人生自古谁无死，留取丹心照汗青"))
   ```
 
-**调用词性标注**
+- **调用词性标注**
 
-依照上述介绍安装好工具后，可通过我们封装好的接口，以统一的形式调用任一个工具的词性标注，代码如下所示：
+  依照上述介绍安装好工具后，可通过我们封装好的接口，以统一的形式调用任一个工具的词性标注，代码如下所示：
 
-```python
-from tools_wapper import *
+  ```python
+  from tools_wapper import *
 
-# 若使用StandfordNLP或者pyltp需要设置字典路径
-standforddict = "./stanford-corenlp-4.0.0/"
-pyltpdict = "./ltp_data_v3.4.0/"
+  # 若使用StandfordNLP或者pyltp需要设置字典路径
+  standforddict = "./stanford-corenlp-4.0.0/"
+  pyltpdict = "./ltp_data_v3.4.0/"
 
-# 选择想要调用的分词工具，需要安装，若未安装工具从列表中删除即可
-tools = ['lac', 'jieba', 'pkuseg', 'thulac',
-         'pynlpir', 'pyhanlp', 'foolnltk', 'snownlp',
-         ('standfordnlp', standforddict), ('pyltp', pyltpdict)]
+  # 选择想要调用的分词工具，需要安装，若未安装工具从列表中删除即可
+  tools = ['lac', 'jieba', 'pkuseg', 'thulac',
+           'pynlpir', 'pyhanlp', 'foolnltk', 'snownlp',
+           ('standfordnlp', standforddict), ('pyltp', pyltpdict)]
 
-# 遍历调用所有工具
-for tool in tools:
-  if isinstance(tool, tuple):
-    cutter = eval(tool[0] + "_impl")(tool[1], 'postag')
-    tool = tool[0]
-	else:
-    cutter = eval(tool + "_impl")()
-    
-  print(tool, cutter.cut("人生自古谁无死，留取丹心照汗青"))
-```
+  # 遍历调用所有工具
+  for tool in tools:
+    if isinstance(tool, tuple):
+      cutter = eval(tool[0] + "_impl")(tool[1], 'postag')
+      tool = tool[0]
+    else:
+      cutter = eval(tool + "_impl")('postag')
+
+    print(tool, cutter.cut("人生自古谁无死，留取丹心照汗青"))
+  ```
 
