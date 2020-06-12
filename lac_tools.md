@@ -1,4 +1,26 @@
-[toc]
+# 分词、词性标注、实体识别工具安装与使用
+
+## 1. LAC
+
+https://github.com/baidu/lac
+
+1. 安装Python版本：pip install lac
+2. 调用方式
+
+```python
+# 分词
+from LAC import LAC
+lac = LAC(mode='seg')
+seg_results = lac.run("百度是一家高科技公司")
+print(' '.join(seg_results))
+
+# 词性标注与实体识别
+lac = LAC(mode='lac')
+words, tags = lac.run('百度是一家高科技公司') 
+print(' '.join('%s/%s' % (word, tag) for (word, tag) in zip(words, tags)) 
+```
+
+- 标注含义：https://github.com/baidu/lac
 
 ## 1. Jieba
 
