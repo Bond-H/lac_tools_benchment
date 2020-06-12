@@ -2,15 +2,16 @@
 
 - **[安装与使用介绍](./lac_tools.md)**，整理包括以下工具
 
-  1. Jieba
-  2. THULAC
-  3. pkuseg
-  4. pyhanlp
-  5. StandfordNLP
-  6. LTP
-  7. SnowNLP
-  8. PyNLPIR
-  9. foolnltk
+  1. LAC 
+  2. Jieba
+  3. THULAC
+  4. pkuseg
+  5. pyhanlp
+  6. StandfordNLP
+  7. LTP
+  8. SnowNLP
+  9. PyNLPIR
+  10. foolnltk
 
 - **调用分词**
 
