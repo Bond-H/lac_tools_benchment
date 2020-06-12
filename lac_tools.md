@@ -22,7 +22,7 @@ print(' '.join('%s/%s' % (word, tag) for (word, tag) in zip(words, tags))
 
 - 标注含义：https://github.com/baidu/lac
 
-## 1. Jieba
+## 2. Jieba
 
 https://github.com/fxsjy/jieba
 
@@ -43,7 +43,7 @@ print(' '.join('%s/%s' % (word, tag) for (word, tag) in tag_results))
 
 - 标注含义：https://www.cnblogs.com/adienhsuan/p/5674033.html
 
-## 2. THULAC:
+## 3. THULAC:
 
 https://github.com/thunlp/THULAC-Python
 
@@ -76,7 +76,7 @@ https://github.com/thunlp/THULAC-Python
   ```
 
 
-## 3.pkuseg:
+## 4.pkuseg:
 
 https://github.com/lancopku/pkuseg-python
 
@@ -100,7 +100,7 @@ https://github.com/lancopku/pkuseg-python
 
 - 标注含义：人民日报语料标注
 
-## 4. pyhanlp
+## 5. pyhanlp
 
 https://github.com/tsroten/pynlpir
 
@@ -130,7 +130,7 @@ https://github.com/tsroten/pynlpir
 
 - 标签含义：https://www.cnblogs.com/adienhsuan/p/5674033.html
 
-## 5. StandfordNLP
+## 6. StandfordNLP
 
 https://github.com/stanfordnlp/CoreNLP
 
@@ -164,7 +164,7 @@ https://github.com/stanfordnlp/CoreNLP
 
 - 标注含义：https://www.cnblogs.com/tonglin0325/p/6850901.html
 
-## 6. LTP
+## 7. LTP
 
 https://github.com/HIT-SCIR/pyltp
 
@@ -203,7 +203,7 @@ https://github.com/HIT-SCIR/pyltp
 - 标注含义：https://www.cnblogs.com/tonglin0325/p/6850901.html
 - 命名实体类型为:人名（Nh）、地名（Ns）、机构名（Ni）
 
-## 7. SnowNLP
+## 8. SnowNLP
 
 https://github.com/isnowfy/snownlp
 
@@ -228,7 +228,7 @@ https://github.com/isnowfy/snownlp
 
 - 
 
-## 8. PyNLPIR
+## 9. PyNLPIR
 
 https://github.com/tsroten/pynlpir
 
@@ -260,7 +260,7 @@ https://github.com/tsroten/pynlpir
 
 - 标签含义：**print(pynlpir.pos_map.POS_MAP)**
 
-## 9. foolnltk
+## 10. foolnltk
 
 https://github.com/rockyzhengwu/FoolNLTK
 
